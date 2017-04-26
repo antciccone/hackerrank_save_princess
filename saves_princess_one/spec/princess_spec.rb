@@ -30,4 +30,10 @@ describe "Princess" do
 
       expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
   end
+
+  it "return distance on bigger grid" do
+    princess = Princess.new(6,["m-----", "------", "------", "------", "------", "-----p"])
+
+    expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
+  end
 end
