@@ -34,6 +34,7 @@ describe "Princess" do
   it "return distance on bigger grid" do
     princess = Princess.new(6,["m-----", "------", "------", "------", "------", "-----p"])
 
-    expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
+    answer = ["DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n"]
+    expect(princess.create_directions).to eq(answer)
   end
 end
