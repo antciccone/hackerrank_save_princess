@@ -11,9 +11,11 @@ describe "Princess" do
   expect(princess.princess_coordinates).to eq([])
   end
 
-  it "returns location for mario and princess" do
+  it "returns current location for mario and princess" do
     princess = Princess.new(3,["---", "-m-", "p--"])
     princess.coordinates_for_mario_and_princess
-    
+
+    expect(princess.mario_coordinates).to eq([1,1])
+    expect(princess.princess_coordinates).to eq([2,0])
   end
 end

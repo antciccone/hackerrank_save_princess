@@ -8,8 +8,9 @@ class Princess
   end
 
   def coordinates_for_mario_and_princess
-    grid.each do |row|
-
+    grid.each_with_index do |row, index|
+      mario_coordinates.push(index, row.chars.index("m")) if row.include?("m")
+      princess_coordinates.push(index, row.chars.index("p"))if row.include?("p")
     end
   end
 
