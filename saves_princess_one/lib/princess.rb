@@ -7,9 +7,10 @@ class Princess
     @princess_coordinates = []
   end
 
-  def display_path_to_princess
+  def coordinates_for_mario_and_princess
+    grid.each do |row|
 
-
+    end
   end
 
 end
