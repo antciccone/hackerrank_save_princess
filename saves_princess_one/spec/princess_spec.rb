@@ -44,6 +44,13 @@ describe "Princess" do
     expect(princess.create_directions).to eq(answer)
   end
 
+  it "returns distance when mario is below princess" do
+    princess = Princess.new(4,["p---", "----", "-m--", "----"])
+
+    answer = ["UP\n", "UP\n", "LEFT\n"]
+    expect(princess.create_directions).to eq(answer)
+  end
+
   it "return_column splits row and returns index" do
     princess = Princess.new(3,["---", "-m-", "p--"])
 
