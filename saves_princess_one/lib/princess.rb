@@ -1,11 +1,14 @@
 class Princess
 
-  attr_reader :grid
+  attr_reader :grid, :princess_coordinates, :mario_coordinates
   def initialize(size, grid)
     @grid = grid
+    @mario_coordinates = []
+    @princess_coordinates = []
   end
 
-  def displayPathtoPrincess
+  def display_path_to_princess
+
 
   end
 

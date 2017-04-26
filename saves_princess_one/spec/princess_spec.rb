@@ -8,6 +8,8 @@ describe "Princess" do
       princess = Princess.new(3,["---", "-m-", "p--"])
 
       expect(princess.grid).to eq(["---", "-m-", "p--"])
+      expect(princess.mario_coordinates).to eq([])
+      expect(princess.princess_coordinates).to eq([])
     end
   end
 end
