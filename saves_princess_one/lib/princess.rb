@@ -5,6 +5,7 @@ class Princess
     @grid = grid
     @mario_coordinates = []
     @princess_coordinates = []
+    coordinates_for_mario_and_princess
   end
 
   def coordinates_for_mario_and_princess
@@ -22,7 +23,6 @@ class Princess
   end
 
   def create_directions(directions=[])
-    coordinates_for_mario_and_princess
     row_moves, column_moves = distance_to_save_princess
     row_moves < 0 ? directions +=  ["DOWN\n"] * row_moves.abs :  directions += ["UP\n"] * row_moves.abs
     column_moves < 0 ? directions += ["RIGHT\n"] * column_moves.abs : directions += ["LEFT\n"] * column_moves.abs
