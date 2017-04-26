@@ -20,7 +20,7 @@ describe "Princess" do
   end
 
   it "distance_to_save_princess finds the distance from mario to princess" do
-    princess = Princess.new(3,["---", "-m-", "p--"])
+    princess = Princess.new(3,["---", "-m-", "p--"]).coordinates_for_mario_and_princess
 
     expect(princess.distance_to_save_princess).to eq([-1, 1])
   end

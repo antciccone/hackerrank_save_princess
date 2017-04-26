@@ -12,12 +12,14 @@ class Princess
       mario_coordinates.push(index, row.chars.index("m")) if row.include?("m")
       princess_coordinates.push(index, row.chars.index("p"))if row.include?("p")
     end
+    self
   end
 
   def distance_to_save_princess
-
+    row_moves = mario_coordinates[0] - princess_coordinates[0]
+    column_moves = mario_coordinates[1] - princess_coordinates[1]
+    [row_moves, column_moves]
   end
-
 end
 
 #get coordinates of princess and mario
