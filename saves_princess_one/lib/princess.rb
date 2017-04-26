@@ -10,10 +10,14 @@ class Princess
 
   def coordinates_for_mario_and_princess
     grid.each_with_index do |row, index|
-      mario_coordinates.push(index, row.chars.index("m")) if row.include?("m")
-      princess_coordinates.push(index, row.chars.index("p"))if row.include?("p")
+      mario_coordinates.push(index, spilt_up_row("m", row)) if row.include?("m")
+      princess_coordinates.push(index, spilt_up_row("p", row)) if row.include?("p")
     end
     self
+  end
+
+  def spilt_up_row(letter, row)
+    row.chars.index(letter)
   end
 
   def distance_to_save_princess
