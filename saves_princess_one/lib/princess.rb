@@ -14,6 +14,10 @@ class Princess
     end
   end
 
+  def distance_to_save_princess
+
+  end
+
 end
 
 #get coordinates of princess and mario
