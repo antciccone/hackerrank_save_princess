@@ -21,13 +21,11 @@ class Princess
     [row_moves, column_moves]
   end
 
-  def create_directions
-
+  def create_directions(directions=[])
+    coordinates_for_mario_and_princess
+    row_moves, column_moves = distance_to_save_princess
+    row_moves < 0 ? directions +=  ["DOWN\n"] * row_moves.abs :  directions += ["UP\n"] * row_moves.abs
+    column_moves < 0 ? directions += ["RIGHT\n"] * column_moves.abs : directions += ["LEFT\n"] * column_moves.abs
+    directions
   end
 end
-
-#get coordinates of princess and mario
-#once coordinates are located calculate disance between mario and princess
-#possibly store their coordinates in an array
-#once you find the distance between both - use Directions up, down, left, right
-#initialize with grid - easier to access from all methods
