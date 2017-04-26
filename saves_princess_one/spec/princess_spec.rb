@@ -24,4 +24,10 @@ describe "Princess" do
 
     expect(princess.distance_to_save_princess).to eq([-1, 1])
   end
+
+  it "create directions for mario to save princess" do
+      princess = Princess.new(3,["---", "-m-", "p--"])
+
+      expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
+  end
 end

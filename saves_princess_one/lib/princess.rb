@@ -20,6 +20,10 @@ class Princess
     column_moves = mario_coordinates[1] - princess_coordinates[1]
     [row_moves, column_moves]
   end
+
+  def create_directions
+
+  end
 end
 
 #get coordinates of princess and mario
