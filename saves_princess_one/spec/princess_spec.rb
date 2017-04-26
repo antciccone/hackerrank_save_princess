@@ -43,4 +43,10 @@ describe "Princess" do
     answer = ["DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n"]
     expect(princess.create_directions).to eq(answer)
   end
+
+  it "return_column splits row and returns index" do
+    princess = Princess.new(3,["---", "-m-", "p--"])
+
+    expect(princess.return_column("m", "-m-")).to eq(1)
+  end
 end
