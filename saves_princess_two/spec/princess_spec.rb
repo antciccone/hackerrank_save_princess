@@ -46,6 +46,12 @@ describe "Princess" do
     expect(princess.create_directions).to eq("DOWN\n")
   end
 
+  it "create_directions returns the first move for mario to save princess if mario is below princess" do
+    princess = Princess.new(3,2,1,["---", "-p-", "-m-"])
+
+    expect(princess.create_directions).to eq("UP\n")
+  end
+
   it "return_column splits column and returns index" do
     princess = Princess.new(3,1,1,["---", "-mp", "---"])
 
