@@ -63,4 +63,11 @@ describe "Princess" do
 
     expect(princess.return_column("m", "-m-")).to eq(1)
   end
+
+  it "mario and princess coordinates are empty arrays if m and p are not inserted in grid" do
+    princess = Princess.new(3,["---", "---", "---"])
+
+    expect(princess.mario_coordinates).to eq([])
+    expect(princess.princess_coordinates).to eq([])
+  end
 end
