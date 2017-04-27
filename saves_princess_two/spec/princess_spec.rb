@@ -21,4 +21,8 @@ describe "Princess" do
     expect(princess.grid).to eq(["---", "-m-", "p--"])
     expect(princess.princess_coordinates).to eq([2,0])
   end
+
+  it "distance_to_save_princess returns an array of cooridnates to travel" do 
+
+  end
 end

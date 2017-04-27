@@ -15,6 +15,10 @@ class Princess
     end
   end
 
+  def distance_to_save_princess
+    
+  end
+
   def return_column(letter, row)
     row.chars.index(letter)
   end
