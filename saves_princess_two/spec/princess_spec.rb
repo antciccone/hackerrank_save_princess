@@ -28,5 +28,15 @@ describe "Princess" do
     expect(princess.distance_to_save_princess).to eq([-1, 1])
   end
 
+  it "create_directions returns the first move for mario to save princess" do
+    princess = Princess.new(3,1,1,["---", "-m-", "p--"])
 
+    expect(princess.create_directions).to eq("DOWN\n")
+  end
+
+  it "create_directions returns the first move for mario to save princess if they are on the same row" do
+    princess = Princess.new(3,1,1,["---", "-mp", "---"])
+
+    expect(princess.create_directions).to eq("RIGHT\n")
+  end
 end
