@@ -1,4 +1,6 @@
 class Princess
+
+  attr_reader :mario_coordinates
   def initialize(n, row, column, grid)
     @grid = grid
     @mario_coordinates = [row, column]
