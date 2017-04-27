@@ -9,7 +9,7 @@ describe "Princess" do
     expect(princess.class).to eq(Princess)
   end
 
-  it "mario_coordinates are entered by the user" do
+  it "mario_coordinates are initially entered by the user" do
     princess = Princess.new(3,1,1,["---", "-m-", "p--"])
 
     expect(princess.mario_coordinates).to eq([1,1])

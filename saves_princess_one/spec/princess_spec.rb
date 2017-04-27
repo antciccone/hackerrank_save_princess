@@ -2,7 +2,6 @@ require 'rspec'
 require_relative '../lib/princess'
 
 describe "Princess" do
-
   it "creates an instance of the Princess class" do
     princess = Princess.new(3,["---", "-m-", "p--"])
 
@@ -10,7 +9,6 @@ describe "Princess" do
   end
 
   it "initializes with grid, mario_coordinates, princess_coordinates" do
-
     princess = Princess.new(3,["---", "-m-", "p--"])
 
     expect(princess).to respond_to(:grid)
@@ -31,27 +29,27 @@ describe "Princess" do
     expect(princess.distance_to_save_princess).to eq([-1, 1])
   end
 
-  it "create directions for mario to save princess" do
+  it "create_directions for mario to save princess" do
       princess = Princess.new(3,["---", "-m-", "p--"])
 
       expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
   end
 
-  it "return distance on bigger grid" do
+  it "create_directions return correct distance on bigger grid" do
     princess = Princess.new(6,["m-----", "------", "------", "------", "------", "-----p"])
 
     answer = ["DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n"]
     expect(princess.create_directions).to eq(answer)
   end
 
-  it "returns distance when mario is below princess" do
+  it "create_directions returns distance when mario is below princess" do
     princess = Princess.new(4,["p---", "----", "-m--", "----"])
 
     answer = ["UP\n", "UP\n", "LEFT\n"]
     expect(princess.create_directions).to eq(answer)
   end
 
-  it "returns distance when mario is on the same row as princess" do
+  it "create_directions returns distance when mario is on the same row as princess" do
     princess = Princess.new(4,["p--m", "----", "----", "----"])
 
     answer = ["LEFT\n", "LEFT\n", "LEFT\n"]
