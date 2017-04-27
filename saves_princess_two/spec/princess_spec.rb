@@ -39,4 +39,16 @@ describe "Princess" do
 
     expect(princess.create_directions).to eq("RIGHT\n")
   end
+
+  it "create_directions returns first direction on large grid" do
+    princess = Princess.new(6,0,0,["m-----", "------", "------", "------", "------", "-----p"])
+
+    expect(princess.create_directions).to eq("DOWN\n")
+  end
+
+  it "return_column splits column and returns index" do
+    princess = Princess.new(3,1,1,["---", "-mp", "---"])
+
+    expect(princess.return_column("m", "m--")).to eq(0)
+  end
 end
