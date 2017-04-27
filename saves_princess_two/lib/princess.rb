@@ -16,7 +16,9 @@ class Princess
   end
 
   def distance_to_save_princess
-    
+    row_moves = mario_coordinates[0] - princess_coordinates[0]
+    column_moves = mario_coordinates[1] - princess_coordinates[1]
+    [row_moves, column_moves]
   end
 
   def return_column(letter, row)

@@ -22,7 +22,11 @@ describe "Princess" do
     expect(princess.princess_coordinates).to eq([2,0])
   end
 
-  it "distance_to_save_princess returns an array of cooridnates to travel" do 
+  it "distance_to_save_princess returns an array of cooridnates to travel" do
+    princess = Princess.new(3,1,1,["---", "-m-", "p--"])
 
+    expect(princess.distance_to_save_princess).to eq([-1, 1])
   end
+
+
 end
