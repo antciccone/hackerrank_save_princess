@@ -30,12 +30,12 @@ describe "Princess" do
   end
 
   it "create_directions for mario to save princess" do
-      princess = Princess.new(3,["---", "-m-", "p--"])
+    princess = Princess.new(3,["---", "-m-", "p--"])
 
-      expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
+    expect(princess.create_directions).to eq(["DOWN\n","LEFT\n"])
   end
 
-  it "create_directions return correct distance on bigger grid" do
+  it "create_directions returns correct distance on bigger grid" do
     princess = Princess.new(6,["m-----", "------", "------", "------", "------", "-----p"])
 
     answer = ["DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "DOWN\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n", "RIGHT\n"]
