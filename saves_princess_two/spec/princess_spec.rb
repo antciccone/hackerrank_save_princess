@@ -57,4 +57,10 @@ describe "Princess" do
 
     expect(princess.return_column("m", "m--")).to eq(0)
   end
+
+  it "princess coordinates are empty if p is left out of the grid" do
+    princess = Princess.new(3,1,1,["---", "-m-", "---"])
+
+    expect(princess.princess_coordinates).to eq([])
+  end
 end
